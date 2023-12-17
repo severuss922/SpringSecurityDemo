@@ -5,16 +5,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("v1")
-public class CustomerController {
+@RequestMapping("/api/v1")
+public class DemoController {
 
-    @GetMapping("/index")
+    @GetMapping("/demo")
     public String index(){
-        return "Hello World";
+        return "Welcome from secure endpoint 1";
     }
 
     @GetMapping("/index2")
     public String index2(){
-        return "Hello World Not SECURED!";
+        return "Welcome from a Not SECURED endpoint!";
     }
 }
